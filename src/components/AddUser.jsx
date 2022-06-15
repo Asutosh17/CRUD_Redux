@@ -52,10 +52,14 @@ export const AddUser = () => {
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" value={name}   name="name" onChange={handleInputChange} label="Enter your Name" variant="outlined"/><br />
-      <TextField id="outlined-basic" value={email}  name="email" onChange={handleInputChange} label="Enter your Email" variant="outlined" /><br />
-      <TextField id="outlined-basic" value={phone}  name="phone" onChange={handleInputChange} label="Enter your Contact Number" variant="outlined" /><br />
-      <TextField id="outlined-basic" value={address}name="address" onChange={handleInputChange} label="Enter your Address" variant="outlined" /><br />
+      <TextField id="outlined-basic" value={name}   name="name" onChange={handleInputChange} label="Enter your Name" variant="outlined"/>
+      <br />
+      <TextField id="outlined-basic" value={email}  name="email" onChange={handleInputChange} label="Enter your Email" variant="outlined" />
+      <br />
+      <TextField id="outlined-basic" value={phone}  name="phone" onChange={handleInputChange} label="Enter your Contact Number" variant="outlined" />
+      <br />
+      <TextField id="outlined-basic" value={address}name="address" onChange={handleInputChange} label="Enter your Address" variant="outlined" />
+      <br />
       <Button variant="contained" onClick={handleSubmit}>Submit</Button>
     </Box>
     </div>
