@@ -36,7 +36,7 @@ export default function Home() {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell align='center'>Name</TableCell>
+            <TableCell align="center">Name</TableCell>
             <TableCell align="center">Email</TableCell>
             <TableCell align="center">Contact</TableCell>
             <TableCell align="center">Address</TableCell>
@@ -44,21 +44,39 @@ export default function Home() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((users) => (
+          {users.map(users => (
             <TableRow
               key={users.id}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
             >
-              <TableCell component="th" scope="row" align='center'>
+              <TableCell component="th" scope="row" align="center">
                 {users.name}
               </TableCell>
               <TableCell align="center">{users.email}</TableCell>
               <TableCell align="center">{users.phone}</TableCell>
               <TableCell align="center">{users.address}</TableCell>
-              <TableCell align="center"><ButtonGroup variant="contained" aria-label="outlined button group" className='btn'>
-      <Button color='error' onClick={() => {handleDelete(users.id)}}>Delete</Button>
-      <Button color='primary' onClick={() => navigate(`/edit-user/${users.id}`)}>Edit</Button>
-    </ButtonGroup></TableCell>
+              <TableCell align="center">
+                <ButtonGroup
+                  variant="contained"
+                  aria-label="outlined button group"
+                  className="btn"
+                >
+                  <Button
+                    color="error"
+                    onClick={() => {
+                      handleDelete(users.id);
+                    }}
+                  >
+                    Delete
+                  </Button>
+                  <Button
+                    color="primary"
+                    onClick={() => navigate(`/edit-user/${users.id}`)}
+                  >
+                    Edit
+                  </Button>
+                </ButtonGroup>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>
