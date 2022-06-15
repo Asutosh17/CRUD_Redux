@@ -26,6 +26,7 @@ export default function Home() {
 
     const {users} = useSelector(state => state.users)
 
+
     const handleDelete = (id) => {
         dispatch(deleteUsers(id))
     }
@@ -72,8 +73,7 @@ export default function Home() {
                   <Button
                     color="primary"
                     onClick={() => navigate(`/edit-user/${users.id}`)}
-                  >
-                    Edit
+                  > Edit
                   </Button>
                 </ButtonGroup>
               </TableCell>
