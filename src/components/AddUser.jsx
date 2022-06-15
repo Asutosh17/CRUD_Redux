@@ -41,7 +41,8 @@ export const AddUser = () => {
 
   return (
     <div>
-        <h3>Enter User Details</h3><br />
+        <h3>Enter User Details</h3>
+        <br />
         {error && <h3>{error}</h3>}
         <Box
       component="form"
