@@ -17,6 +17,7 @@ export default function Home() {
 
 
     const dispatch = useDispatch()
+    
     const navigate = useNavigate()
 
     React.useEffect(() => {
